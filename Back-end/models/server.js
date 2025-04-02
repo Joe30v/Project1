@@ -1,12 +1,12 @@
  import express from 'express';
 import dotenv from 'dotenv';
-import { connectDB } from './db.js';
-import Product from '../models/Product.model.js';
+import { connectDB } from '../config/db.js';
+import Product from './Product.model.js';
 
 dotenv.config();
 
   const app = express();
-
+  const PORT =process.env.PORT || 5000; // set the port to 5000 or the port specified in the environment variables
   app.use(express.json()); // parse JSON request body allow use to accept json data in request body
 
   app.post("/api/products", async (req, res) => {
@@ -53,7 +53,7 @@ dotenv.config();
     );
   app.listen(5000, () => {
     connectDB();
-  console.log('server started at htttp://localhost:5000');
+  console.log("server started at htttp://localhost:" + PORT);
 });
 
 
