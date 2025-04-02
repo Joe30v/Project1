@@ -1,7 +1,7 @@
  import express from 'express';
 import dotenv from 'dotenv';
-import { connectDB } from '../config/db.js';
-import Product from './Product.model.js';
+import { connectDB } from '../backend/config/db.js';
+import Product from './models/Product.model.js';
 
 dotenv.config();
 

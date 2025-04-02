@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev" : "node Backend/server.js"
+    "dev": "node Back-end/server.js"
   },
   "type": "module",
   "keywords": [],
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "mongodb": "^6.15.0",
     "mongoose": "^8.13.1"
   }
 }
